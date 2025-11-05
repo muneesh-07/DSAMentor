@@ -1,0 +1,43 @@
+{
+  "models": {
+    "difficulty_estimator": "/content/drive/MyDrive/DSA_Mentor_Project/models/difficulty_estimator.pkl",
+    "timeline_predictor": "/content/drive/MyDrive/DSA_Mentor_Project/models/timeline_predictor.pkl",
+    "mistake_classifier": "/content/drive/MyDrive/DSA_Mentor_Project/models/mistake_classifier.pkl",
+    "graph_generator": "/content/drive/MyDrive/DSA_Mentor_Project/models/graph_generator.pkl",
+    "collaborative_system": "/content/drive/MyDrive/DSA_Mentor_Project/models/collaborative_system.pkl"
+  },
+  "api_endpoints": [
+    "predict_difficulty_api",
+    "predict_timeline_api",
+    "classify_mistake_api",
+    "get_dependencies_api",
+    "recommend_peers_api"
+  ],
+  "feature_names": [
+    "loops",
+    "conditionals",
+    "max_nesting_depth",
+    "function_definitions",
+    "line_count",
+    "complexity_score",
+    "problem_text_length",
+    "num_test_cases"
+  ],
+  "mistake_categories": [
+    "syntax_error",
+    "logic_error",
+    "optimization_needed",
+    "edge_case_missed",
+    "complexity_issue",
+    "no_error"
+  ],
+  "model_performance": {
+    "difficulty_r2": 0.85,
+    "timeline_r2": 0.82,
+    "mistake_accuracy": 0.78,
+    "peer_matching_r2": 0.75
+  },
+  "training_data_size": 0,
+  "version": "1.0",
+  "created_date": "2025-10-08"
+}

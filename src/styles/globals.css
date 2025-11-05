@@ -1,0 +1,229 @@
+/* src/styles/globals.css - Earthy Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #F5F5F0 0%, rgba(230, 216, 195, 0.3) 100%);
+  color: #3d3d3d;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Scrollbar Styles - Earthy */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E6D8C3;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5D866C, #7ba085);
+  border-radius: 5px;
+  border: 2px solid #E6D8C3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4a6d56, #5D866C);
+}
+
+/* Custom Utilities */
+.gradient-text-earthy {
+  background: linear-gradient(135deg, #5D866C, #7ba085);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card-earthy {
+  background: rgba(230, 216, 195, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(194, 166, 140, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(93, 134, 108, 0.15);
+}
+
+.nature-glow {
+  box-shadow: 0 0 30px rgba(93, 134, 108, 0.3);
+  transition: box-shadow 0.4s ease;
+}
+
+.nature-glow:hover {
+  box-shadow: 0 0 40px rgba(93, 134, 108, 0.5);
+}
+
+/* Enhanced Button Styles */
+.earthy-button {
+  background: linear-gradient(135deg, #5D866C 0%, #7ba085 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: none;
+  font-size: 0.95rem;
+}
+
+.earthy-button:hover {
+  background: linear-gradient(135deg, #4a6d56 0%, #5D866C 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(93, 134, 108, 0.4);
+}
+
+.earthy-button:active {
+  transform: translateY(-1px);
+}
+
+/* Card Enhanced Styles */
+.nature-card {
+  background: linear-gradient(145deg, #E6D8C3 0%, rgba(245, 245, 240, 0.9) 100%);
+  border: 1px solid rgba(194, 166, 140, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(93, 134, 108, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(93, 134, 108, 0.25);
+  border-color: rgba(93, 134, 108, 0.3);
+}
+
+/* Loading Animation - Earthy */
+@keyframes earthyPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(93, 134, 108, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(93, 134, 108, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(93, 134, 108, 0.4);
+  }
+}
+
+.earthy-pulse {
+  animation: earthyPulse 2s infinite;
+}
+
+/* Success States */
+.success-earthy {
+  background: linear-gradient(135deg, rgba(93, 134, 108, 0.1) 0%, rgba(123, 160, 133, 0.05) 100%);
+  border: 2px solid rgba(93, 134, 108, 0.3);
+  color: #5D866C;
+}
+
+/* Enhanced Typography */
+.nature-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5D866C, #7ba085);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.nature-body {
+  font-family: 'Inter', sans-serif;
+  color: #3d3d3d;
+  line-height: 1.7;
+}
+
+/* Code Editor Enhancements */
+.monaco-editor-earthy {
+  border: 2px solid rgba(93, 134, 108, 0.2) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+/* Particle Background for Earthy Theme */
+.particles-earthy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .nature-heading {
+    font-size: 2rem !important;
+  }
+  
+  .earthy-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .nature-card {
+    border-radius: 16px;
+  }
+  
+  .nature-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #2d3d2d 0%, rgba(93, 134, 108, 0.1) 100%);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection Colors */
+::selection {
+  background: rgba(93, 134, 108, 0.3);
+  color: #3d3d3d;
+}
+
+::-moz-selection {
+  background: rgba(93, 134, 108, 0.3);
+  color: #3d3d3d;
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid #5D866C;
+  outline-offset: 2px;
+}
+
+/* Enhanced Transitions */
+.smooth-transition {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

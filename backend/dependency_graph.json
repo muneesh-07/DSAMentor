@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {
+      "id": "recursion",
+      "label": "Recursion",
+      "problem_count": 2,
+      "difficulty": 0.46022791845827105,
+      "problems": [
+        "test_problem_0",
+        "test_problem_5"
+      ]
+    }
+  ],
+  "links": []
+}
